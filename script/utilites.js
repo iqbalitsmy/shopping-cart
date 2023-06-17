@@ -44,8 +44,11 @@ function subTotal() {
     const subTotal = phonePrice + casePrice;
     setElementInnerText("subtotal", subTotal);
 
+    // tex
+    const tex = Math.ceil(subTotal * 0.1);
+    setElementInnerText("tax", tex);
+
     // Total
-    const tax = getElementInnerText("tax");
-    const total = subTotal + tax;
+    const total = subTotal + tex;
     setElementInnerText("total", total);
 }
